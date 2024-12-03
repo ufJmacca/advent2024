@@ -36,12 +36,9 @@ def advent_2(input: str) -> int:
 
     for mul in mul_matches:
         closest = find_closest_lower(mul[0], do_matches, dont_matches)
-        print(f"mul: {mul}, closest values: {closest}")
         if closest[1] is None:
-            print("adding to multiplication")
             multiplication += mul[2]
         elif closest[0] > closest[1]:
-            print("adding to multiplication")
             multiplication += mul[2]
     
     return multiplication
